@@ -12,8 +12,6 @@ class ListaScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<Group> groups = <Group>[];
-
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
       body: SafeArea(
