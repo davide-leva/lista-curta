@@ -9,7 +9,6 @@ const snowColor = Color(0xFFFFFAFA);
 
 const defaultPadding = 16.0;
 
-const apiKey =
-    "fekzvWaQhSm3XpdqzSxm3cPXaSCTk7wovEIP2ChdvqKonCaNtpo5IyscW2lqmbzn";
-const endpoint =
-    "https://westus.azure.data.mongodb-api.com/app/dashboard-cjphk/endpoint/";
+const kEndpoint = 'api.curtaevents.it';
+const kDevice = 'web-lista';
+const kKey = 'd82f725a9f936ec194861cb6b4c896d283f2a1f5ecc7cbd553c8506a5d9cf1ff';

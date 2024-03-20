@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:lista/costants.dart';
 
 class Group {
   Group({
@@ -81,8 +82,8 @@ class Person {
 
 class Data {
   static final Map<String, String> _headers = {
-    'device': 'lista_online',
-    'key': 'd82f725a9f936ec194861cb6b4c896d283f2a1f5ecc7cbd553c8506a5d9cf1ff',
+    'device': kDevice,
+    'key': kKey,
     'Content-Type': 'application/json',
   };
 
@@ -93,7 +94,7 @@ class Data {
 
   static Future<String> get() async {
     http.Response responseParties = await http.get(
-      Uri.parse('https://api.curta-events.it/main:parties/'),
+      Uri.parse('https://$kEndpoint/main:parties/'),
       headers: _headers,
     );
 
@@ -106,7 +107,7 @@ class Data {
     partyDate = parties[0].date;
 
     http.Response responseGroups = await http.get(
-      Uri.parse('https://api.curta-events.it/${parties[0].tag}:groups/'),
+      Uri.parse('https://$kEndpoint/${parties[0].tag}:groups/'),
       headers: _headers,
     );
 
